@@ -399,7 +399,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c1"># Prompt variable</span>
@@ -444,7 +444,7 @@ RMSE (standard): 6.41
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c1"># Prompt variable</span>
@@ -489,15 +489,15 @@ RMSE (standard): 6.41
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c1"># Prompt variable</span>
-<span class="n">evalPrompt</span> <span class="o">=</span> <span class="s1">&#39;RMSE with dxcode, demos, hospital &amp; dates:&#39;</span>
+<span class="n">evalPrompt</span> <span class="o">=</span> <span class="s1">&#39;RMSE with dxcode, demos, hospital &amp; Arrival DOW:&#39;</span>
 
 <span class="c1">#ID feature and target variables</span>
-<span class="n">feature_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;DXCODE&#39;</span><span class="p">,</span> <span class="s1">&#39;Age&#39;</span><span class="p">,</span> <span class="s1">&#39;Race&#39;</span><span class="p">,</span> <span class="s1">&#39;Gender&#39;</span><span class="p">,</span> <span class="s1">&#39;Hospital&#39;</span><span class="p">,</span> <span class="s1">&#39;ArriveDateDOW&#39;</span><span class="p">,</span> <span class="s1">&#39;DischargeDateDOW&#39;</span><span class="p">]</span>
-<span class="n">categorical_features</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;DXCODE&#39;</span><span class="p">,</span> <span class="s1">&#39;Race&#39;</span><span class="p">,</span> <span class="s1">&#39;Gender&#39;</span><span class="p">,</span> <span class="s1">&#39;Hospital&#39;</span><span class="p">,</span> <span class="s1">&#39;ArriveDateDOW&#39;</span><span class="p">,</span> <span class="s1">&#39;DischargeDateDOW&#39;</span><span class="p">]</span>
+<span class="n">feature_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;DXCODE&#39;</span><span class="p">,</span> <span class="s1">&#39;Age&#39;</span><span class="p">,</span> <span class="s1">&#39;Race&#39;</span><span class="p">,</span> <span class="s1">&#39;Gender&#39;</span><span class="p">,</span> <span class="s1">&#39;Hospital&#39;</span><span class="p">,</span> <span class="s1">&#39;ArriveDateDOW&#39;</span><span class="p">]</span>
+<span class="n">categorical_features</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;DXCODE&#39;</span><span class="p">,</span> <span class="s1">&#39;Race&#39;</span><span class="p">,</span> <span class="s1">&#39;Gender&#39;</span><span class="p">,</span> <span class="s1">&#39;Hospital&#39;</span><span class="p">,</span> <span class="s1">&#39;ArriveDateDOW&#39;</span><span class="p">]</span>
 
 <span class="c1">#Train model and print results</span>
 <span class="n">TrainAndPrintEval</span><span class="p">(</span><span class="n">source_data</span><span class="p">,</span> <span class="n">feature_names</span><span class="p">,</span> <span class="n">categorical_features</span><span class="p">,</span> <span class="n">evalPrompt</span><span class="p">)</span>
@@ -513,7 +513,7 @@ RMSE (standard): 6.41
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>RMSE with dxcode, demos, hospital &amp; dates: 6.16
+<pre>RMSE with dxcode, demos, hospital &amp; Arrival DOW: 6.18
 RMSE (standard): 6.41
 </pre>
 </div>
@@ -534,7 +534,7 @@ RMSE (standard): 6.41
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="k">def</span> <span class="nf">TrainAndPrintEval</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">featureColumns</span><span class="p">,</span> <span class="n">categoricalColumns</span><span class="p">,</span> <span class="n">message</span><span class="p">,</span> <span class="n">targetColumn</span><span class="o">=</span><span class="s1">&#39;LOS&#39;</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="mi">123</span><span class="p">):</span>
@@ -662,10 +662,10 @@ Name: DischargeDate, dtype: datetime64[ns]</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">source_data_features</span><span class="o">.</span><span class="n">DischargeDate</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">dayofweek</span>
+<div class=" highlight hl-ipython2"><pre><span class="n">source_data</span><span class="o">.</span><span class="n">DischargeDate</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">dayofweek</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
 </pre></div>
 
 </div>
@@ -676,71 +676,13 @@ Name: DischargeDate, dtype: datetime64[ns]</pre>
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[7]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[10]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>0         4
-1         4
-2         4
-3         4
-4         4
-5         4
-6         4
-7         4
-8         4
-9         4
-10        4
-11        4
-12        4
-13        4
-14        4
-15        4
-16        4
-17        4
-18        4
-19        4
-20        4
-21        4
-22        4
-23        4
-24        4
-25        4
-26        4
-27        1
-28        1
-29        1
-         ..
-279778    1
-279779    0
-279780    5
-279781    5
-279782    5
-279783    5
-279784    5
-279785    5
-279786    5
-279787    0
-279788    0
-279789    0
-279790    0
-279791    0
-279792    0
-279793    0
-279794    0
-279795    0
-279796    3
-279797    3
-279798    3
-279799    3
-279800    3
-279801    3
-279802    3
-279803    4
-279804    4
-279805    4
-279806    4
-279807    4
+<pre>1    4
+2    4
+3    4
 Name: DischargeDate, dtype: int64</pre>
 </div>
 
